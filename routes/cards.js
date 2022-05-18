@@ -26,9 +26,9 @@ router.get('/:id', (req, res) => {
         }
     }
     
-    const templateData = { text, id, flipPath, name };
+    const templateData = { text, id, flipPath, name, side };
     if (side === 'question') {
-        templateData.hint = hint;
+       templateData.hint = hint;
     }
     res.render('card', templateData);
 });
