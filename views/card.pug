@@ -1,7 +1,10 @@
 extends layout.pug
 block content
     section#content 
-        h2= prompt
+        h2= text
         if hint
             p
                 i hint: #{hint}
+        a(href=`${id}?side=${flipPath()}`) #{flipPath()}
+        br
+        a(href='/cards/') Next card
